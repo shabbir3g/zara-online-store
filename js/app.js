@@ -61,7 +61,7 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = ` 
-        <div class="card h-100 shadow py-3">
+        <div class="card h-100 shadow pt-3">
         <img src="${image}" class="card-img-top img-fluid product-image" alt="...">
         <div class="card-body">
           <h5 class="card-title">${product.title}</h5>
