@@ -23,7 +23,6 @@ const closeModal = () =>{
 
 // Single product preview in modal
 const productModal = (product) => {
-  console.log(product);
   const modalBox = document.getElementById('modal-box');
   const div = document.createElement('div');
   div.classList.add('modal-content');
@@ -35,7 +34,7 @@ const productModal = (product) => {
     <div class="modal-body">
     <img src="${product.image}" class="card-img-top img-fluid product-image" alt="...">
     <p>Category: ${product.category}</p>
-    <h4>Price: $ ${product.price}</h4>
+    <h5>Price: $ ${product.price}</h5>
     <div class="product-rating"> 
     <ul class="rating">
     <li><i class="fas fa-star"></i></li>
@@ -56,19 +55,18 @@ const productModal = (product) => {
 
 // show all product in UI 
 const showProducts = (products) => {
-  console.log(products);
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = ` 
-        <div class="card h-100">
+        <div class="card h-100 shadow py-3">
         <img src="${image}" class="card-img-top img-fluid product-image" alt="...">
         <div class="card-body">
           <h5 class="card-title">${product.title}</h5>
               <p>Category: ${product.category}</p>
-              <h4>Price: $ ${product.price}</h4>
+              <h5>Price: $ ${product.price}</h5>
               <div class="product-rating"> 
                 <ul class="rating">
                 <li><i class="fas fa-star"></i></li>
